@@ -1,12 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AbstractAccountAdapter = void 0;
-const AbstractAdapter_1 = require("../core/AbstractAdapter");
-class AbstractAccountAdapter extends AbstractAdapter_1.AbstractAdapter {
-    constructor(state = {}) {
-        super(state);
-    }
-}
-exports.AbstractAccountAdapter = AbstractAccountAdapter;
-exports.default = AbstractAccountAdapter;
-//# sourceMappingURL=AbstractAccountAdapter.js.map
+(()=>{"use strict";var t={9527:(t,e)=>{Object.defineProperty(e,"__esModule",{value:!0}),e.AbstractAdapter=void 0,e.AbstractAdapter=class{constructor(t={}){this._listeners=[],this._defaultState={},this._defaultState=t,this.initialize()}get defaultState(){return this._defaultState}get listeners(){return this._listeners}addStateListener(t){this._listeners.push(t)}removeStateListener(t){const e=this._listeners.findIndex((e=>t===e));return e>-1&&this._listeners.splice(e,1),e>-1}}}},e={};function s(r){var i=e[r];if(void 0!==i)return i.exports;var a=e[r]={exports:{}};return t[r](a,a.exports,s),a.exports}(()=>{const t=s(9527);t.AbstractAdapter})()})();

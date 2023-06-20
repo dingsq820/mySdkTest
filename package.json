@@ -1,9 +1,8 @@
 {
   "name": "nft-core-sdk",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "description": "nft-core-sdk",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
@@ -17,8 +16,7 @@
     "prettier": "prettier --check ./src/**/*.{ts,tsx}",
     "prettier:fix": "prettier --write ./src/**/*.{ts,tsx}",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "build:webpack": "rm -rf dist && tsc --project tsconfig.build.json && webpack"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@ethersproject/wallet": "^5.7.0",
@@ -78,9 +76,36 @@
   },
   "devDependencies": {
     "abortcontroller-polyfill": "^1.7.5",
-    "lokijs": "^1.5.12",
-    "ts-loader": "^9.4.3",
-    "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "lokijs": "^1.5.12"
+  },
+  "react-native": {
+    "crypto": "react-native-crypto",
+    "net": "react-native-tcp",
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "os": "react-native-os",
+    "fs": "react-native-level-fs",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "vm": "vm-browserify"
+  },
+  "browser": {
+    "crypto": "react-native-crypto",
+    "net": "react-native-tcp",
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "os": "react-native-os",
+    "fs": "react-native-level-fs",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "vm": "vm-browserify"
   }
 }
